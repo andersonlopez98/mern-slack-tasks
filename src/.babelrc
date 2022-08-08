@@ -1,0 +1,9 @@
+{
+"presets": [
+    //["env", "react"] //definiendo que presets tiene que leer
+    "@babel/preset-env",
+    "@babel/preset-react"
+
+]
+    
+}

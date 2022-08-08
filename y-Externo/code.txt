@@ -1,0 +1,62 @@
+1. inicializar un proyecto de node js | npm init --yes | lo que hara sera crear package.json, con configuraciones basicas
+2. Instalar modulos que se van a agregar en package.json
+2.1 modulo de express | npm install express| freambrock de nodejs    
+
+inicializar servidor | node src/index.js|
+
+creando script de start en package.json
+*"start": "node src/index.js"
+agregando otro script 
+*"dev" "nodemon src/index.js" |ejecutando otro modululo llamado nodemon|
+antes de correrlo debemos intalarlo como hicimos con express
+*npm install nodemon -D | la D porque lo estamos intalando como una dependencia de desarollo
+corriendo nuestros propios scripts
+* npm run dev | run antes del nombre del script creado
+nodemon, solo nos ayuda a reiniciar el servidor cada ves que hagamos un cambio
+
+*/*/Nuevos modulos
+npm install morgan |permiten registras las peticiones (por consola) llegando desde el navegador, que hacen a mi servidor
+
+***
+npm install mongoose | este modulo nos permite conectarnos a la base de datos y al mismo tiempo como van a lucir los datos dentro de la base de datos
+
+*******agregando react al pryecto --------------------------------
+se agrega index.js en la carpeta app
+convertir el codigo de app/index.js 
+con la herrmienta webpack | npm i webpack -D |
+*modulo que necesita webpack cli | npm install i webpack-cli -D | 
+
+crear archivo de configuracion en el mismo nivel de package.json
+llamdado | webpack.config.js |
+"webpack": "webpack --mode development" | agregando nuevo(comando) script 
+|npm webpack| correr el comando nuevo (correra el archivo de configuracion llamado webpack.config.js)
+
+modulos necesarios para que el codigo entienda react
+|npm install react react-dom - D| 
+
+si creamos algun componente debemos correr | npm run webpack |
+si nos sale algun error es porque en la confisuracion de webpack lo tenemos confugurado con la transformacion de un js basico
+y en este caso estamos tranformando jsx y para que eso debemos intalar un traductor de jsx llamado babel 
+
+|npm install babel-core babel-loader babel-preset-react babel-preset-env -D| se encarga de traducuir el codigo (babel-core) (babel-loader, para que webpack tomar babel para hacerla funcionar internamente) , (babel-preset-react, extensiones para que babel sepa que traducr - react ), (babel-preset-env, env para que traduzca todo el codigo js moderno que se utilice )
+| |npm install @babel/core @babel/loader @babel/preset-react @babel/preset-env -D| | por si el anterior codigo no sirve
+
+creamos un archivo de  configuracion de babel llamado
+.babelrc
+luego lo llamamos en el archivo de configuracion de webpack 
+y finalmente corremos | npm run webpack | para correr ese archivo de cofiguracion creado
+
+|npm run dev| probamos que funcione 
+
+****************************************************************
+agregamos --watch en el script de package.json | "webpack": "webpack --mode development --watch" | para ver automaticamente los cambios
+y lo corremos en otra consola
+npm run webpack
+
+**** freambrock  materializecss
+web | https://materializecss.com/ |
+
+
+
+
+*************quede en parte Parte 2 - Frontend con React ... quedamos en -- 1:03
